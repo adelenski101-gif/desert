@@ -189,7 +189,7 @@ else
   CURRENT=$((CURRENT+1))
 
   # to rerun amass remove first and last line of the block
-  : <<'AMASS_BLOCK'
+  : <<'AMASS_BLOCK' ... AMASS_BLOCK 
   # Amass (passive)
   step "$CURRENT" "$TOTAL_STEPS" "Running Amass (passive)..."
   if command -v amass >/dev/null 2>&1; then
@@ -351,4 +351,3 @@ echo "📝 Log (errors/warnings): $LOGFILE"
 echo "-----------------------------------------------------"
 
 exit 0
-
